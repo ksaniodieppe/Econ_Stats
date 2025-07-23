@@ -1,14 +1,16 @@
 """"Web Based Exchange Rates and S&P 500 Dashboard"""
 
+
 import streamlit as st
-# Add matplotlib backend configuration
-import matplotlib
-matplotlib.use('Agg')
-import matplotlib.pyplot as plt
 import pandas as pd
 import requests
 import yfinance as yf
 from datetime import datetime, timedelta
+
+# Configure matplotlib
+import matplotlib
+matplotlib.use('Agg')  # Must be before importing pyplot
+import matplotlib.pyplot as plt
 
 def main():
     st.title('Exchange Rates and S&P 500 Dashboard')
