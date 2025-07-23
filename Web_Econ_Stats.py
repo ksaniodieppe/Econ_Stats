@@ -1,8 +1,11 @@
 """"Web Based Exchange Rates and S&P 500 Dashboard"""
 
 import streamlit as st
-import pandas as pd
+# Add matplotlib backend configuration
+import matplotlib
+matplotlib.use('Agg')
 import matplotlib.pyplot as plt
+import pandas as pd
 import requests
 import yfinance as yf
 from datetime import datetime, timedelta
